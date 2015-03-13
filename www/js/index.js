@@ -2,25 +2,20 @@ var app = {
     // Application Constructor
     isAndroid:false,
     apiServer:"http://ion.nonstoptv.tv/",
-    initialize: function() {        
+    initialize: function() {           
+        $.mobile.utils.showWaitBox("a", "Iniciando Bapro Mobile");
         this.bindEvents();
         //Inicio de APP        
-        if (deviceDetect.Android()!=null)this.isAndroid=true;        
+        //if (deviceDetect.Android()!=null)this.isAndroid=true;        
         this.showLoadingBar("Iniciando Aplicación");
         
     },
     // Bind Event Listeners
-    bindEvents: function() {
-        
-        $(function() {
-            
-            document.addEventListener("deviceready", app.onDeviceReady, false);
-            
-        });        
-        
+    bindEvents: function() {        
+        document.addEventListener("deviceready", app.onDeviceReady, false);                            
     },
     cargarNotas:function(categoria){
-        this.showLoadingBar("Cargando Noticias");
+        app.showLoadingBar("Cargando Noticias");
         $.getJSON(this.apiServer + 'rss/parser.php', function(data) {
 
         var source   = $("#rss-template").html();
@@ -31,12 +26,11 @@ var app = {
             $('.result').append(template(context));                
         })
 
-          //app.hideLoadingBar();
+          app.hideLoadingBar();
         });
 
     },
-    showLoadingBar:function(message){
-        //console.log("show loading bar");
+    showLoadingBar:function(message){      
         $.mobile.loading( 'show', {
             text: message,
             textVisible: true,
@@ -58,7 +52,8 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {    
-        app.hideLoadingBar();
+        $.mobile.utils.hideWaitBox();
+        app.hideLoadingBar();                
         this.loadRss("home");    
         app.receivedEvent('deviceready');        
     },    
