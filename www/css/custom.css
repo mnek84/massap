@@ -37,11 +37,10 @@ img {
 .ui-content .ui-listview, .ui-panel-inner>.ui-listview {
 	margin-left: 0; 
 }
-#sidebar {
-	padding-top: 70px;
-}
+
 .logo-sidebar {
 	text-align: center;
+	margin-top: 70px;
 }
 
 
