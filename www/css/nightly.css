@@ -26,11 +26,11 @@
 /* 1. Globals and typography
 -----------------------------------------------------------------------------------------------------------*/
 
-* {
+/** {
    font-family: 'Source Sans Pro', sans-serif;
    font-weight: 300;
    text-shadow: none !important;
-}
+}*/
 
 div[data-role=content] img {
     width: 100%;
@@ -38,7 +38,7 @@ div[data-role=content] img {
 
 p, a {
     line-height: 1.66;
-    font-weight: 300 !important;
+    /*font-weight: 300 !important;*/
 }
 
 a {
@@ -719,7 +719,7 @@ progress[data-theme=b]::-moz-progress-value {
 
 [data-role=header] #header-menu-icon[data-position=right] {
     left: auto;
-    right: -24px;
+    /*right: -24px;*/
 }
 
 [data-role=header] #header-search-icon {
@@ -996,31 +996,6 @@ progress[data-theme=b]::-moz-progress-value {
 
 #sidebar {
     padding: 23px 0 0 0;
-}
-
-#sidebar ul li {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background: none;
-    border: none;
-    text-transform: uppercase;
-    text-shadow: none;
-    margin: 1px 0;
-}
-
-#sidebar ul li a {
-    color: #fff;
-    border: none;
-    background: none;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 18pt;
-    letter-spacing: 0.085em;
-    padding: 2px 0 2px 20px;
-    font-weight: bold !important;
-    line-height: 1.25;
-}
-
-#sidebar ul li ul li a {
-    padding: 2px 0 2px 26px;
 }
 
 #sidebar .menu-mark {

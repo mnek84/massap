@@ -2,7 +2,7 @@
 	width: 260px !important;
 }
 .ui-panel-position-right{
-	width: 260px !important;
+	width: 272px !important;
 }
 
 #sidebar{
@@ -15,10 +15,10 @@
 	background-color: black;
 }
 
-.ui-btn-right>img{
+/*.ui-btn-right>img{
 	position: absolute;
 	right: -63px !important;
-}
+}*/
 
 [data-role=panel][data-theme=a]{
 	background-color: #0F0F0F;
@@ -26,30 +26,11 @@
 }
 
 
-.ui-listview{
-	margin-top: 60px !important;
-}
 
-.sidebar_social{
-	position: absolute;
-	top:0px;
-	left: -40px;
-	margin: auto;
-}
-.sidebar_social li{
-	padding: 0px;
-	float:left;	
-	list-style: none;
-}
 
-.sidebar_social li img{
-	border:1px solid #242424;
-	height: 49px;
-}
-
-#sidebar {
+/*#sidebar {
 	padding:0px;
-}
+}*/
 
 .ui-listview{
 	clear: both;
@@ -562,10 +543,9 @@ input[type=password] {
   font-size: 13px;
   color: #767676;
   padding: 10px 12px;
-  background-color: #fdfdfd;
+  
   border: 1px solid #e3e3e3;
   outline: none;
-  margin-bottom: 4px;
 }
 textarea:focus,
 input[type=text]:focus,

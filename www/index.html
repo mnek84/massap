@@ -1,16 +1,16 @@
 <!DOCTYPE HTML>
 <html>
     <head>
+    <meta charset="utf-8">
     <title>MASSAP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    
-    <script src="cordova.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
 
     <link rel="stylesheet" href="css/jqeury.mobile.theme.min.css" />
     <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
     <link rel="stylesheet" href="css/jquery.mobile.min.css" />
     <link rel="stylesheet" href="css/nightly.css" />
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic|Oswald:400,700' rel='stylesheet' type='text/css'>
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic|Oswald:400,700' rel='stylesheet' type='text/css'>-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/massap.css">
     
@@ -19,36 +19,119 @@
     <script src="js/jquery.mobile.min.js"></script>
     <script src="js/device.detect.js"></script>
     <script src="js/nightly.js"></script>
-    
+    <!--<script src="js/jquery.zrssfeed.min.js" type="text/javascript"></script>-->    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/custom.css">
     </head>
     <body>
     
         <div data-role="page" data-theme='a'>
             <div data-role="panel" data-display="push" id="sidebar" data-theme="a" data-position="right">
-                
+              <ul class="sidebar_social">
+                <li><img src="images/facebook.png"/></li>
+                <li><img src="images/tw.png"/></li>
+                <li><img src="images/gplus.png"/></li>
+                <li><img src="images/youtube.png"/></li>
+                <li><img src="images/pintereset.png"/></li>
+              </ul>
 
-                <ul class="sidebar_social">
-                  <li><img src="images/facebook.png"/></li>
-                  <li><img src="images/tw.png"/></li>
-                  <li><img src="images/gplus.png"/></li>
-                  <li><img src="images/youtube.png"/></li>
-                  <li><img src="images/pintereset.png"/></li>
-                </ul>
-                <ul data-role="listview">
-                    <li data-icon='false'><a data-ajax="false" href="index.html">Home</a></li>
-                </ul>
+              <div class="logo-sidebar">
+                <img src="images/logo-menu.png" class="img-center">
+              </div>
+
+              <ul data-role="listview">
+                  <li data-icon='false'><a data-ajax="false" href="index.html">Hoy <span><i class="fa fa-plus"></i></span></a></li>
+                  <li data-icon='false'><a data-ajax="false" href="index.html">Noticias <span><i class="fa fa-plus"></i></span></a></li>
+                  <li data-icon='false'><a data-ajax="false" href="index.html">Propuestas <span><i class="fa fa-plus"></i></span></a></li>
+                  <li data-icon='false'><a data-ajax="false" href="index.html">Escribime <span><i class="fa fa-plus"></i></span></a></li>
+              </ul>
             </div>
     
     
-            <div data-role="header" data-tap-toggle="false" data-theme='a'>                
+            <div class="header-fixed" data-role="header" data-tap-toggle="false" data-theme='a'>                
                 <a href='#' data-role="none" id="a-search"><img src="images/logo_header.png" alt="search" id="header-search-icon" /></a>
                 <h1 class="header-title"><img src="images/massapheader.png" alt="sidebar" id="header-menu-icon" data-position="right" /></h1>
                 <a href='#sidebar'data-role="none"><img src="images/menu-icon.png" alt="sidebar" id="header-menu-icon" data-position="right" /></a>
             </div>
             
-            <div data-role="content">
-                <div class="result"></div>
-            </div>
+            <div class="content" data-role="content">
+              <div class="result">
+
+                <div class="container-destacada">
+                  <div class="destacada">
+                    <div class="fecha-in">
+                      <span class="dia">18</span>
+                      <span class="mes">MAR</span>
+                    </div>
+                    <img src="images/destacada.jpg" class="img-responsive">
+                  </div>
+                  <h5>Campaña 2015, Frente Renovador</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sd diam non ummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci […]</p>
+                  <a href="#" class="pull-right"><i class="fa fa-plus"></i> LEER MAS</a>
+                </div>
+
+                <div class="divider">
+                  <span><i class="fa fa-plus"></i></span>
+                </div>
+
+                <div class="nota">
+                  <div class="thumbnail">
+                    <img src="images/thumbnail.jpg">
+                  </div>
+                  <div class="titulo">
+                    <h5>Campaña 2015, Frente Renovador</h5>
+                    <span class="fecha-nota">
+                      18/03/2015
+                    </span>
+                  </div>
+                  <div class="resumen-nota">
+                    <p >Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sd diam non ummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.</p>
+                  </div>
+                  <a href="#" class="pull-right"><i class="fa fa-plus"></i> LEER MAS</a>
+                </div><!--nota-->
+
+                <div class="divider">
+                  <span><i class="fa fa-plus"></i></span>
+                </div>
+
+                <div class="nota">
+                  <div class="thumbnail">
+                    <img src="images/thumbnail.jpg">
+                  </div>
+                  <div class="titulo">
+                    <h5>Campaña 2015, Frente Renovador</h5>
+                    <span class="fecha-nota">
+                      18/03/2015
+                    </span>
+                  </div>
+                  <div class="resumen-nota">
+                    <p >Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sd diam non ummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.</p>
+                  </div>
+                  <a href="#" class="pull-right"><i class="fa fa-plus"></i> LEER MAS</a>
+                </div><!--nota-->
+
+                <div class="divider">
+                  <span><i class="fa fa-plus"></i></span>
+                </div>
+
+                <div class="nota">
+                  <div class="thumbnail">
+                    <img src="images/thumbnail.jpg">
+                  </div>
+                  <div class="titulo">
+                    <h5>Campaña 2015, Frente Renovador</h5>
+                    <span class="fecha-nota">
+                      18/03/2015
+                    </span>
+                  </div>
+                  <div class="resumen-nota">
+                    <p >Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sd diam non ummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.</p>
+                  </div>
+                  <a href="#" class="pull-right"><i class="fa fa-plus"></i> LEER MAS</a>
+                </div><!--nota-->
+
+              </div><!--result-->
+            </div><!--content-->
             
             <div data-role="footer" data-theme="none" data-border="false" data-position="fixed">
                 <p data-inset="true"><strong>[footer]</strong> MASSAP 2015. All rights reserved.</p>
@@ -80,7 +163,7 @@
       </div>
       <div class="mk-blog-meta">
         <h3 class="the-title"><a href="">{{title}}</a></h3>
-        <time datetime="12 marzo, 2015"><a href="">12 marzo, 2015</a></time>
+        <time datetime="12 marzo, 2015"><a href="http://www.frenterenovador.org.ar/2015/03/">12 marzo, 2015</a></time>
         <div class="the-excerpt">
           {{desc}}
         </div>
@@ -108,10 +191,6 @@
     
     <script src="js/index.js?v3"></script>    
     <script type="text/javascript">
-       
-       window.addEventListener('load', function () {
-            //app.initialize();
-       }, false);
-
+        //app.initialize();
     </script>
 </html>
