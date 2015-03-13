@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <title>MASSAP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <link rel="stylesheet" href="css/jqeury.mobile.theme.min.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.min.css" />
+    <link rel="stylesheet" href="css/nightly.css" />
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic|Oswald:400,700' rel='stylesheet' type='text/css'>-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/massap.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/handlebars-v3.0.0.js"></script>    
+    <script src="js/jquery.mobile.min.js"></script>
+    <script src="js/device.detect.js"></script>
+    <script src="js/nightly.js"></script>
+    <!--<script src="js/jquery.zrssfeed.min.js" type="text/javascript"></script>-->
+    </head>
+    <body onload="startapp()">
+    
+        <div data-role="page" data-theme='a'>
+            <div data-role="panel" data-display="push" id="sidebar" data-theme="a" data-position="right">
+                
+
+                <ul class="sidebar_social">
+                  <li><img src="images/facebook.png"/></li>
+                  <li><img src="images/tw.png"/></li>
+                  <li><img src="images/gplus.png"/></li>
+                  <li><img src="images/youtube.png"/></li>
+                  <li><img src="images/pintereset.png"/></li>
+                </ul>
+                <ul data-role="listview">
+                    <li data-icon='false'><a data-ajax="false" href="index.html">Home</a></li>
+                </ul>
+            </div>
+    
+    
+            <div data-role="header" data-tap-toggle="false" data-theme='a'>                
+                <a href='#' data-role="none" id="a-search"><img src="images/logo_header.png" alt="search" id="header-search-icon" /></a>
+                <h1 class="header-title"><img src="images/massapheader.png" alt="sidebar" id="header-menu-icon" data-position="right" /></h1>
+                <a href='#sidebar'data-role="none"><img src="images/menu-icon.png" alt="sidebar" id="header-menu-icon" data-position="right" /></a>
+            </div>
+            
+            <div data-role="content">
+                <div class="result"></div>
+            </div>
+            
+            <div data-role="footer" data-theme="none" data-border="false" data-position="fixed">
+                <p data-inset="true"><strong>[footer]</strong> MASSAP 2015. All rights reserved.</p>
+            </div>
+            
+        </div>
+    </body>
+
+    <script id="entry-template" type="text/x-handlebars-template">      
+      <div class="entry">
+        <h3>{{title}}</h3>
+        <div class="body">!!! {{body}}</div>
+      </div>
+
+    </script>
+
+
+    <script id="rss-template" type="text/x-handlebars-template">      
+    <article id="10308" class="mk-blog-newspaper-item" style="opacity: 1;">
+    <div class="blog-item-holder">
+      <div class="featured-image">
+        <a title="{{title}}" class="mk-lightbox blog-newspaper-lightbox" href=""><img alt="{{title}}" src="{{foto}}" itemprop="image">
+        <div class="image-hover-overlay">
+        </div>
+        <div class="post-type-badge" href="#">
+          <i class="mk-jupiter-icon-image"></i>
+        </div>
+        </a>
+      </div>
+      <div class="mk-blog-meta">
+        <h3 class="the-title"><a href="">{{title}}</a></h3>
+        <time datetime="12 marzo, 2015"><a href="">12 marzo, 2015</a></time>
+        <div class="the-excerpt">
+          {{desc}}
+        </div>
+      </div>
+      <div class="newspaper-item-footer">
+        <div class="newspaper-item-footer-holder">
+          <a class="mk-readmore" href="http://www.frenterenovador.org.ar/massa-en-bahia-blanca-todos-se-llenan-la-boca-hablando-de-los-chicos-pero-docentes-y-alumnos-saben-por-que-hay-clases/"><i class="mk-moon-arrow-right-2"></i>Lees más</a>
+          <div class="mk-love-holder newspapre-footer-icons">
+            <a href="#" class="mk-love-this " id="mk-love-10308"><i class="mk-icon-heart"></i><span class="mk-love-count">0</span></a>
+          </div>
+          <span class="newspaper-item-share newspapre-footer-icons"><i class="mk-moon-share-2"></i></span>
+          <div class="clearboth">
+          </div>
+        </div>
+        <ul class="newspaper-social-share">
+          <li><a class="facebook-share" data-title="{{title}}" data-url="http://www.frenterenovador.org.ar/massa-en-bahia-blanca-todos-se-llenan-la-boca-hablando-de-los-chicos-pero-docentes-y-alumnos-saben-por-que-hay-clases/" href="#"><i class="mk-jupiter-icon-simple-facebook"></i></a></li>
+          <li><a class="twitter-share" data-title="{{title}}" data-url="http://www.frenterenovador.org.ar/massa-en-bahia-blanca-todos-se-llenan-la-boca-hablando-de-los-chicos-pero-docentes-y-alumnos-saben-por-que-hay-clases/" href="#"><i class="mk-jupiter-icon-simple-twitter"></i></a></li>
+          <li><a class="googleplus-share" data-title="{{title}}" data-url="http://www.frenterenovador.org.ar/massa-en-bahia-blanca-todos-se-llenan-la-boca-hablando-de-los-chicos-pero-docentes-y-alumnos-saben-por-que-hay-clases/" href="#"><i class="mk-jupiter-icon-simple-googleplus"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    </article>    
+    </script>
+
+    
+    <script src="js/app.js?v3"></script>    
+    <script type="text/javascript">
+       function startapp(){
+          //app.initialize();
+       } 
+    </script>
+</html>
